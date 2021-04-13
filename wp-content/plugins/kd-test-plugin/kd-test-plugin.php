@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Plugin Name: test
+ * Plugin Name: Konstruct Test
  * Description: Simple Shortcode Plugin
  * Author: Eddy B.
  * Version: 1.0.0
@@ -10,8 +10,7 @@
 //Define function called by short code
 function test_func()
 {
-  $txt = "TEST SUCCEEDED!";
-  return $txt;
+  return "TEST SUCCEEDED!!";
 }
 
 //Define "test" short code and specify function to call
