@@ -25,7 +25,7 @@ function getFeed($postCount = '0')
     echo '<div class="row" style="display:flex;flex-wrap: wrap; justify-content:space-between;">';
     foreach ($rss_items as $item) :
     ?>
-      <div class="card" style="width:25%; margin:10px;">
+      <div class="card" style=" flex:none; min-width:200px; max-width:200px; margin:10px;">
         <img src="https://www.konstructdigital.com/wp-content/uploads/2021/04/SEO-is-dead-banner.jpg" alt="" style="width:100%">
         <a title="<?php printf(__('Posted %s', 'my-text-domain'), $item->get_date('j F Y | g:i a')); ?>" href="<?php echo esc_url($item->get_permalink()); ?>" target="_blank" rel="noopener">
 
