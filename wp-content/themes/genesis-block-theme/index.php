@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The main template file.
  *
@@ -7,28 +8,28 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
-			<div id="post-wrap">
-				<?php
-				if ( have_posts() ) :
+<section id="primary" class="content-area">
+	<main id="main" class="site-main">
+		<div id="post-wrap">
+			<?php
+			if (have_posts()) :
 
-					while ( have_posts() ) :
-						the_post();
+				while (have_posts()) :
+					the_post();
 
-						get_template_part( 'template-parts/content' );
-					endwhile;
+					get_template_part('template-parts/content');
+				endwhile;
 
-				else :
+			else :
 
-					get_template_part( 'template-parts/content-none' );
-					
-				endif;
-				?>
-			</div>
+				get_template_part('template-parts/content-none');
 
-			<?php the_posts_pagination(); ?>
-		</main><!-- #main -->
-	</section><!-- #primary -->
+			endif;
+			?>
+		</div>
+
+		<?php the_posts_pagination(); ?>
+	</main><!-- #main -->
+</section><!-- #primary -->
 
 <?php get_footer(); ?>
